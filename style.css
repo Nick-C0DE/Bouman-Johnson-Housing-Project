@@ -1,3 +1,30 @@
-h1{
-    color:blue;
+body{
+    
+    background-color: black;
 }
+h1{
+    font-size:70px;
+    color:white;
+}
+p{
+    color:red;
+}
+.centered {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .centeredx {
+    background-color:white;
+    opacity: 0.8;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 50%;
+    margin: 0 auto;
+    padding-top: 50px auto;
+  }
