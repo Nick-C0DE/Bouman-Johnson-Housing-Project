@@ -1,7 +1,4 @@
-body{
-    
-    background-color: black;
-}
+
 h1{
     font-size:70px;
     color:white;
@@ -23,8 +20,18 @@ p{
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: 50%;
+    width: 600px;
+    height: 1050px;
     margin: 0 auto;
-    padding-top: 50px auto;
+    margin-top: 15%;
+    padding-top: 50px;
+    font-size:2em;
   }
+  /* form{
+    font-size:2em;
+  } */
+  input{
+    width:75px;
+  }
+  
+  
