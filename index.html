@@ -1,128 +1,242 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- //css -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- //google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
 
-    <title> predict API </title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+
 </head>
+    <body>
+        <div class="parent">
+            <div class="div1"> 
+                <div class="title-main">
+                    <h1>Predict your HOME PRICE</h1>
+                </div>
+                <div class="container">
+                    <br>
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
 
-<body>
-<div id="container">
-    <div id="banner">
-    <img class="cityNight" style="width:100%; height: 641px;" src="image/cityNight.jpg" alt="city night">
-    <div class="centered"><h1>Predict your HOME PRICE</h1></div>
-    
-    
-    </div>
-    <div id="main" >
-        <div id="left">
-        <img class="greenFlat" style="opacity:0.9; width: 100%;" src="image/greenFlat.jpg" alt="green Flat">
+                      </ol>
+                  
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                  
+                        <div class="item active">
+                          <img src="image/villaView.jpg" alt="Chania" width="460" height="345">
+                          <div class="carousel-caption">
+                            <h3>VOUS SOUHAITEZ VENDRE VOTRE BIEN IMMOBILIER ?</h3>
+                            <p>Vendez aujourd'hui pour obtenir un prix maximum !</p>
+                          </div>
+                        </div>
+                  
+                        <div class="item">
+                          <img src="image/house.jpg" alt="Chania" width="460" height="345">
+                          <div class="carousel-caption">
+                            <h3>CETTE ANNÉE EST VOTRE ANNÉE</h3>
+                            <p>Profitez de cette période propice à l’immobilier pour vendre au meilleur prix !</p>
+                          </div>
+                        </div>
+                      
+                        <div class="item">
+                          <img src="image/greenFlat.jpg" alt="Flower" width="460" height="345">
+                          <div class="carousel-caption">
+                            <h3>ESTIMATION 3 VALEURS</h3>
+                            <p>VENDEZ BIEN PLUS RAPIDEMENT grâce à l'Estimation 3 Valeurs ! Une Estimation INNOVANTE et 100% GRATUITE...</p>
+                          </div>
+                        </div>
+                  
+                        <div class="item">
+                          <img src="image/appartement.jpg" alt="Flower" width="460" height="345">
+                          <div class="carousel-caption">
+                            <h3>STRATÉGIE VENTE 3 VALEURS</h3>
+                            <p>Cette stratégie vente 3 valeurs totalement unique permet d’atteindre des VALEURS DE VENTE BIEN PLUS ÉLEVÉES que la moyenne !</p>
+                          </div>
+                        </div>
+                        
+                        <div class="item">
+                            <img src="image/cityNight.jpg" alt="Flower" width="460" height="345">
+                            <div class="carousel-caption">
+                              <h3>Vendez vite et bien</h3>
+                              <p>Grâce à nos secrets bien gardés !</p>
+                            </div>
+                          </div>
+                    
+                      </div>
+                  
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div>
+                <!-- <img class="cityNight" style="width:100%; height: 641px;" src="image/cityNight.jpg" alt="city night"> -->
+                
+                <div class="main" >
+                        <!-- <img class="greenFlat" style="opacity:0.9; width: 100%;" src="image/greenFlat.jpg" alt="green Flat"> -->
+                        <form action="" method="post" id="example-form" style="text-align: center;">
+                            <div>
+                                <label class="field-name" for="zip-code">Enter a postal code</label>
+                                <br>
+                                <input type="number" id="zip-code" name="zip-code" placeholder="ex:1000">
+                            </div>
+                            <div>
+                                <label class="field-name" for="property-type">Property type</label>
+                                <br>
+                                <select id="property-type" name="property-type">
+                                    <option value="APARTMENT">APARTMENT</option>
+                                    <option value="HOUSE">HOUSE</option>
+                                    <option value="OTHERS">OTHERS</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="field-name" for="area">Living area</label>
+                                <br>
+                                <input type="number" id="area" name="area" placeholder="m2">
+                            </div>
+                            <div>
+                                <label class="field-name" for="rooms-number">Number of bedrooms</label>
+                                <br>
+                                <input type="number" id="rooms-number" name="rooms-number" min="0" value="1">
+                            </div>
+                            <div>
+                                <label class="field-name" for="building-state">Building condition </label>
+                                <br>
+                                <select id="building-state" name="building-state">
+                                    <option value="NEW">NEW</option>
+                                    <option value="GOOD">GOOD</option>
+                                    <option value="TO RENOVATE">TO RENOVATE</option>
+                                    <option value="JUST RENOVATED">JUST RENOVATED</option>
+                                    <option value="TO REBUILD">TO REBUILD</option>
+                                </select>
+                            </div>
+                            <a id="myBtn">+</a>
+
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal">
+                                <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div>
+                                    <label class="field-name" for="facades-number">Number of frontages</label>
+                                    <br>
+                                    <input type="number" id="facades-number" name="facades-number" min="0" max="4" value="1">
+                                </div>
+                                <div>
+                                    <label class="field-name" for="equipped-kitchen">Equipped kitchen</label>
+                                    <br>
+                                    <label for="equipped-kitchen">Yes</label>
+                                    <input type="radio" name="equipped-kitchen">
+                                    <label for="equipped-kitchen">No</label>
+                                    <input type="radio" name="equipped-kitchen" checked>
+                                </div>
+                                <div>
+                                    <label class="field-name" for="furnished">Furnished</label>
+                                    <br>
+                                    <label for="furnished">Yes</label>
+                                    <input type="radio" name="furnished" >
+                                    <label for="furnished">No</label>
+                                    <input type="radio" name="furnished" checked>
+                                </div>
+                                <div>
+                                    <label class="field-name" for="open-fire">Open-fire</label>
+                                    <br>
+                                    <label for="open-fire">Yes</label>
+                                    <input type="radio" name="open-fire" >
+                                    <label for="open-fire">No</label>
+                                    <input type="radio" name="open-fire" checked >
+                                </div>
+                                <div>
+                                    <label class="field-name" for="swimmingpool">Swimming pool</label>
+                                    <br>
+                                    <label for="swimmingpool">Yes</label>
+                                    <input type="radio" name="swimmingpool" >
+                                    <label for="swimmingpool">No</label>
+                                    <input type="radio"  name="swimmingpool" checked>
+                                </div>
+                                <div>
+                                    <label class="field-name" for="garden">Garden</label>
+                                    <br>
+                                    <label for="garden">Yes</label>
+                                    <input type="radio" name="garden" >
+                                    <label for="garden">No</label>
+                                    <input type="radio" name="garden" checked>
+                                </div>
+                                <div>
+                                    <label class="field-name" for="garden-area">Garden surface (min)</label>
+                                    <br>
+                                    <input type="number" id="garden-area" name="garden-area" min="0" value="0">
+                                </div>
+                                <div>
+                                    <label class="field-name" for="terrace">Terrace</label>
+                                    <br>
+                                    <label for="terrace">Yes</label>
+                                    <input type="radio" name="terrace">
+                                    <label for="terrace">No</label>
+                                    <input type="radio" name="terrace" checked>
+                                </div>
+                                <div>
+                                    <label class="field-name" for="terrace-area">Terrace surface (min)</label>
+                                    <br>
+                                    <input type="number" id="terrace-area" name="terrace-area" min="0" value="0">
+                                </div>
+                                <div>
+                                    <label class="field-name" for="land-area">Surface of the plot</label>
+                                    <br>
+                                    <input type="number" id="land-area" name="land-area" min="0" value="0">
+                                </div>
+                            </div>
+                        </div>
+                    <div>
+                        
+                    </div>
+                    <input type="submit" id="submit" name="submit" value="Commencer l'estimation">
+                        <p id='pricing'></p>
+                        <p id='pricing1'></p>
+                </form>
+                    <!-- Trigger/Open The Modal -->
+                </div>
+            </div>
         </div>
-        
-        <div class="centeredx" style="font-family: 'Oswald', sans-serif;">
-        <form action="" method="post" id="example-form" style="text-align: center;">
-        <label for="property-type">Type(*):</label>
-        <select id="property-type" name="property-type">
-            <option value="APARTMENT">APARTMENT</option>
-            <option value="HOUSE">HOUSE</option>
-            <option value="OTHERS">OTHERS</option>
-          </select>
-        <br>
-        <label for="area">Area*:</label>
-        <input type="number" id="area" name="area">
-        <br>
-        <label for="rooms-number">Number of room(s)*:</label>
-        <input type="number" id="rooms-number" name="rooms-number" min="0" value="1">
-        <br>
-        <label for="building-state">Type(*):</label>
-        <select id="building-state" name="building-state">
-            <option value="NEW">NEW</option>
-            <option value="GOOD">GOOD</option>
-            <option value="TO RENOVATE">TO RENOVATE</option>
-            <option value="JUST RENOVATED">JUST RENOVATED</option>
-            <option value="TO REBUILD">TO REBUILD</option>
-          </select>
-        <br>
-        <label for="facades-number">Number of facades:</label>
-        <input type="number" id="facades-number" name="facades-number" min="0" max="4" value="1">
-        <br>
-        <label for="zip-code">zip-code*:</label>
-        <input type="number" id="zip-code" name="zip-code">
-        <br>
-        <label for="equipped-kitchen"> equipped kitchen</label>
-        <input type="radio" name="equipped-kitchen">
-        <label for="equipped-kitchen"> not equipped</label>
-        <input type="radio" name="equipped-kitchen" checked>
-        <br>
-        <label for="furnished">furnished</label>
-        <input type="radio" name="furnished" >
-        <label for="furnished">unfurnished</label>
-        <input type="radio" name="furnished" checked>
-        <br>
-        <label for="open-fire">with open-fire</label>
-        <input type="radio" name="open-fire" >
-        <label for="open-fire">without open-fire</label>
-        <input type="radio" name="open-fire" checked >
-        <br>
-        <label for="swimmingpool">with swimming pool</label>
-        <input type="radio" name="swimmingpool" >
-        <br>
-        <label for="swimmingpool">without swimming pool</label>
-        <input type="radio"  name="swimmingpool" checked>
-        <br>
-        <label for="garden">With garden</label>
-        <input type="radio" name="garden" >
-        <label for="garden">Without garden</label>
-        <input type="radio" name="garden" checked>
-         <br> 
-        <label for="garden-area">Size of the garden:</label>
-        <input type="number" id="garden-area" name="garden-area" min="0" value="0">
-        <br>
-        <label for="terrace">With terrace</label>
-        <input type="radio" name="terrace">
-        <label for="terrace">Without terrace</label>
-        <input type="radio" name="terrace" checked>
-        <br>
-        <label for="terrace-area">Size of the terrace:</label>
-        <input type="number" id="terrace-area" name="terrace-area" min="0" value="0">
-        <br>
-        <label for="land-area">Size of the land:</label>
-        <input type="number" id="land-area" name="land-area" min="0" value="0">
-        <br>
-        <!-- <label for="full-address">full-address:</label>
-        <input type="number" id="full-address" name="full-address">
-        <br> --> 
-        
-    <input type="submit" id="submit" name="submit">
-    <p id='pricing'></p>
-    <p id='pricing1'></p>
-    </form>
-   
-    </div>
-        
-
-        <div id="right">
-        <img class="villaView" style= "width: 100%;"src="image/villaView.jpg" alt="villaView">
-        </div>
-
-   
-
-    
-    
-    </div>
-    <div id='footer'>
-        <div id='zip'></div>
-    </div>
-    </div>
-    <script src="index.js"></script>
-</body>
+        <script src="js/index.js"></script>
+    </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

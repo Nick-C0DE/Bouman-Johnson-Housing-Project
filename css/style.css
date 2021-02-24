@@ -1,0 +1,145 @@
+body {
+  
+}
+ /* ****************************************************************************************************************  */
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
+  
+  .div1 { 
+    grid-area: 1 / 1 / 6 / 6; 
+    font-family: 'Noto Serif', serif;
+  background: #a1dcec;
+  }
+   /* ****************************************************************************************************************  */
+
+
+.title-main{
+ /* background: red; */
+  margin: 0 auto;
+  padding: 0 auto;
+  text-align: center;
+  font-size: 0.9em;
+  z-index: 1;
+  position: relative;
+  top: 100px;
+
+}
+.main{
+  /* background:blue; */
+  margin: 0 auto;
+  padding: 0 auto;
+  
+  font-size: 1.9em;
+  /* text-align: justify; */
+}
+#example-form > *{
+  /* text-align: center; */
+  /* color: white; */
+  padding-left: 8px;
+} 
+#example-form > div{
+  margin: 10px auto;
+  padding: 0 auto;
+  text-align: justify;
+
+}
+.field-name{
+  text-decoration: underline;
+}
+ /* ****************************************************************************************************************  */
+
+input[type=number] {
+  width:100%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+    background: #a1dcec;
+  }
+  input[type=number]:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+  }
+select {
+  width:100%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+    background: #a1dcec;
+  }
+   select:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+    /* background: #a1dcec; */
+  }
+
+  select option{
+    background: #a1dcec;
+  }
+
+
+/* ****************************************************************************************************************  */
+
+
+/* //The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  z-index: 1; /* Sit on top */
+  margin-top: 100px;
+  left: 0;
+  top: 0;
+
+  /* background-color: rgb(0,0,0); Fallback color */
+  /* background-color: rgba(0,0,0,0.4); Black w/ opacity */
+}
+.modal-content  > *{
+  background: #a1dcec;
+}
+
+/* // Modal Content */
+.modal-content {
+  margin: 0 auto;
+  padding: 0 auto;
+  border: 1px solid #888;
+  width: 100%;
+  text-align: justify;
+  
+}
+
+/* //The Close Button  */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+  
+ /* ****************************************************************************************************************  */
+
+
+ .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    /* width: 100%; */
+    margin: auto;
+  }
+   /* ****************************************************************************************************************  */

@@ -21,7 +21,6 @@ document.querySelector("#submit").addEventListener("click", (event) =>{
             "open-fire": document.getElementsByName("open-fire")[0].checked,
             "swimmingpool": document.getElementsByName("swimmingpool")[0].checked,
             "land-area": parseInt(document.querySelector("#land-area").value)
-            // "full-address": toString(document.querySelector("#full-address").value),
         } };
         
         console.log(_data)
@@ -33,7 +32,6 @@ document.querySelector("#submit").addEventListener("click", (event) =>{
         
         .then(response => response.json())
         .then((data) => {
-            // console.log(data)
             document.querySelector("#pricing").innerText = `L'évaluation de votre bien est de ` + Math.floor(data.prediction.price)+ " €."
             document.querySelector("#pricing1").innerText = `Nous sommes a ` + parseInt(data.prediction.r2_score *100)+ ` % sûre de notre estimation. `
         });
@@ -41,38 +39,30 @@ document.querySelector("#submit").addEventListener("click", (event) =>{
 });
 
 
+// Get the modal
+var modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
 
-// 
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-// const proxyurl = "https://cors-anywhere.herokuapp.com/http://cnos.herokuapp.com/predict";
-// fetch(proxyurl)
-//     .then(response => response.json())
-//     .then((data) => {
-        
-//         let content =data.properties.data.properties['zip-code'].enum;
-//         content.sort();
-//         let zip = null;
-//         content.forEach(element => {
-//                 zip = `<option value="${element}">${element}</option>`;
-//             document.getElementById("zip").insertAdjacentHTML("beforeend", zip);
-//         });
-//         console.log(data.properties.data.properties['zip-code'])
-//     });
+// When the user clicks the button, open the modal 
+btn.onclick = function(event) {
+    event.preventDefault()
+  modal.style.display = "block";
+}
 
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
-
-// ************************************************************************
-// let dataBelgium= {};
-//     let urlbelgium = "https://www.odwb.be/api/records/1.0/search/?dataset=code-postaux-belge&q=";
-
-//     fetch(urlbelgium) 
-//     .then(response => response.json())
-//     .then((data) => {
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
     
-//         let com = data.records["0"].fields.column_2;
-//         console.log(com);
-//         // document.querySelector("#pricing").innerText = Math.floor(data.prediction.price)+ " €"
-//         // document.querySelector("#pricing1").innerText = parseInt(data.prediction.r2_score *100)+ " %"
-        
-//     });
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
